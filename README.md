@@ -1,19 +1,30 @@
-# todolist
+# Vue.js Todolist
 
-This template should help get you started developing with Vue 3 in Vite.
+This template is designed to kickstart your development with Vue 3 in Vite, providing a solid foundation for building interactive applications.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+For an optimal development experience, consider using the following setup:
+
+- [VSCode](https://code.visualstudio.com/)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
 ## Firebase Setup
 
 1. Create a project on [Firebase](https://console.firebase.google.com/).
 2. Set up a Firestore database named "tasks" for your project.
 
-You can find help for configuration on (https://cloud.google.com/firestore/docs/create-database-web-mobile-client-library?hl=en)
+   For configuration assistance, refer to the [Firestore documentation](https://cloud.google.com/firestore/docs/create-database-web-mobile-client-library?hl=en).
 
-3. Create a index.js file in firebase folder and copy this code with your Firebase configuration
+```sh
+npm install firebase
+```
+
+3. Create an `index.js` file in the `/src/firebase/` folder and copy the following code, replacing placeholders with your Firebase configuration:
+
+```javascript
+// /src/firebase/index.js
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -29,7 +40,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-export {db}
+export { db };
+```
 
 ## Customize configuration
 
