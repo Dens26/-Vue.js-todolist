@@ -1,0 +1,119 @@
+@import './base.css';
+
+/* Général */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  padding: clamp(5px, 5vw, 50px);
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn {
+  width: 100px;
+  height: 35px;
+}
+
+h1{
+  font-weight: bold;
+}
+
+/* HomeView */
+.tasks {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 5px;
+  border-radius: 5px;
+  background: var(--color-background-task);
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+  border-radius: 5px;
+  background: var(--color-background-mute);
+}
+
+.task-header,
+.task-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+
+.task-header {
+  padding-top: 5px;
+  margin: 0;
+}
+
+.task-footer {
+  padding-bottom: 5px;
+  margin: auto 0;
+}
+
+.task-header div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* AddView and EditView */
+.form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-button{
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.input{
+  height: 30px;
+}
